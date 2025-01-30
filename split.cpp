@@ -16,7 +16,7 @@ the function below should be the only one in this file.
 /* Add a prototype for a helper function here if you need */
 
 void split(Node*& in, Node*& odds, Node*& evens){
-  if(in == nullptr){ //base case
+  if(in == NULL){ //base case
     return;
   }
   
@@ -24,16 +24,14 @@ void split(Node*& in, Node*& odds, Node*& evens){
   if(in->value % 2 == 0){ // checks to see if even
       in->next = evens;
       evens = in;
-      return;
   }
 
   else{ // otherwise odd
     in->next = odds;
     odds = in;
-    return;
   }
 
-  in = nullptr;
+  in = nullptr; // guarantees that in is set to null when program terminates
 }
 
 /* If you needed a helper function, write it here */
