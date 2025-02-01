@@ -95,7 +95,7 @@ void ULListStr::pop_front(){
   }
   size_--; //decreaces size by 1;
   head_->first++; // just move the indices of the array forward 1 we don't need to do anything to the actual value
-  if(head_->last - head_->first == 1){ // if the first array contains 1 string we delete this item
+  if(head_->last == head_->first){ // if the first array contains 1 string we delete this item
     Item* temp = head_;
     head_ = head_->next; // next item becomes head
     if(head_){
